@@ -16,7 +16,8 @@ const sequelize = process.env.JAWSDB_URL
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  database: 'test'
+  database: 'ecommerce_db'
 });
 
 module.exports = sequelize;
+module.exports = connection;
