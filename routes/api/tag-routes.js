@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
 router.get('/', async (req, res) => {
   try {
     const tagData = await Tag.findByPk(req.params.id, {
-      include: [{ Model: Product, through: ProductTag, },],
+      include: [{ model: Product, through: ProductTag, },],
     });
   res.status(200).json(tagData);
   } catch (err) {
